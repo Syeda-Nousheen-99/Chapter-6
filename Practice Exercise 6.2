@@ -1,1 +1,10 @@
+We are going to create a program that will randomly describe an inputted name.
 
+let randomName = ["super", "wonderful", "bad", "angry", "careful"];
+ 
+function Name() {
+    let userName = prompt("What is your name?");
+    let nameAdj = randomName[Math.floor(Math.random() * randomName.length)];
+    console.log(`"${userName}" is ${nameAdj}!`);
+}
+Name();
