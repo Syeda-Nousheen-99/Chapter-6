@@ -1,1 +1,26 @@
+A common problem that we can solve with recursion is calculating the factorial.
 
+function calculateFactorial(num) {
+   
+    if (num === 0) {
+        return 1;
+    } else {
+       
+        return num * calculateFactorial(num - 1);
+    }
+}
+
+const results = calculateFactorial(5);
+
+console.log(`Factorial of 5 is: ${results}`);
+
+function printFactorialSteps(num) {
+    if (num >= 0) {
+        console.log(`Calculating factorial for ${num}`);
+        const factorialResult = calculateFactorial(num);
+        console.log(`Factorial of ${num} is: ${factorialResult}`);
+        printFactorialSteps(num - 1);
+    }
+}
+
+printFactorialSteps(5);
