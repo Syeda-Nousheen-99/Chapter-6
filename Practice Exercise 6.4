@@ -1,1 +1,26 @@
+Modify the calculator that you made in Practice exercise 6.2 to return added values 
+instead of printing them. Then, call the function 10 or more times in a loop, and store 
+the results in an array. Once the loop finishes, output the final array into the console.
 
+const resultsArray = [];
+
+for (let i = 0; i < 10; i++) {
+   
+    const value1 = i * 5;
+    const value2 = i * i;
+
+    function calculateAndReturn(num1, num2) {
+       
+        const result = num1 + num2;
+       
+        resultsArray.push(result);
+       
+        return result;
+    }
+
+    const response = calculateAndReturn(value1, value2);
+
+    console.log(`Iteration ${i + 1}: ${value1} + ${value2} = ${response}`);
+}
+
+console.log("Final Array:", resultsArray);
