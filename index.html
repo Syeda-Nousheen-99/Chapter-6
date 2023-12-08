@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 6</title>
+
+    <style>
+        body {
+            font-family: cursive;
+            margin: 20px;
+            background: linear-gradient(darkviolet, deeppink); 
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        #output {
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Recursive Counting</h1>
+    <div id="output"></div>
+
+    <script>
+        function countUpTo10(start) {
+            // Output the current value to the HTML
+            document.getElementById('output').innerHTML += start + '<br>';
+
+            // Check if the value is greater than or equal to 10; if true, end the recursion
+            if (start >= 10) {
+                return;
+            }
+
+            // Call the function with an incremented value to continue the recursion
+            countUpTo10(start + 1);
+        }
+
+        // Invoke the function with different start numbers
+        countUpTo10(1);  // Start counting from 1
+        countUpTo10(5);  // Start counting from 5
+        countUpTo10(8);  // Start counting from 8
+
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
