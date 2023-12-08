@@ -1,1 +1,27 @@
+Create a basic calculator that takes two numbers and one string value indicating 
+an operation. If the operation equals add, the two numbers should be added. If the 
+operation equals subtract, the two numbers should be subtracted from one another. 
+If there is no option specified, the value of the option should be add.
+
+const number1 = 20;
+const number2 = 10;
+
+
+let operator = '+';
+
+function calculate(num1, num2, operation) {
+    if (operation === '+') {
+        return num1 + num2;
+    } else if (operation === '-') {
+        return num1 - num2;
+    } else {
+        
+        return num1 + num2;
+    }
+}
+
+console.log(`Result (operator: ${operator}):`, calculate(number1, number2, operator));
+
+operator = '-';
+console.log(`Result (operator: ${operator}):`, calculate(number1, number2, operator));
 
