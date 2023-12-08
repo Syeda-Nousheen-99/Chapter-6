@@ -1,1 +1,31 @@
+Use IIFE to create a few immediately invoked functions and observe how the scope is 
+affected.
 
+let value = "1000";
+
+(function() {
+   
+    let value = "Inside IIFE";
+    
+    console.log("Inside IIFE:", value);
+})();
+
+let result = (function() {
+    
+    let value = "Inside IIFE Expression";
+    
+    return value;
+})();
+
+
+console.log("IIFE Expression Result:", result);
+
+
+let anonymousFunction = function(param) {
+   
+    let value = "Inside Anonymous Function: " + param;
+    
+    console.log(value);
+};
+
+anonymousFunction("Custom Value");
